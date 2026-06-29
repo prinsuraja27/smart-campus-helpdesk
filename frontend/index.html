@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Help Desk</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="brand">Smart Campus Help Desk</div>
+            <div class="nav-links">
+                <a href="#submit">Submit</a>
+                <a href="#track">Track</a>
+                <a href="#admin">Admin</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <p class="badge">FastAPI + Frontend + Secure Admin Panel</p>
+            <h1>Student Help Desk Request Portal</h1>
+            <p class="subtitle">
+                Submit campus issues, track request status, and manage requests through a protected admin dashboard.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="submit" class="card grid-two">
+            <div>
+                <p class="section-label">Student Area</p>
+                <h2>Submit a Request</h2>
+                <p class="muted">Fill the form and the backend will store your request in JSON storage with a unique request ID.</p>
+            </div>
+
+            <form id="requestForm" class="form">
+                <label>Student Name</label>
+                <input id="student_name" type="text" placeholder="Enter your name" required minlength="2">
+
+                <label>Enrollment Number</label>
+                <input id="enrollment" type="text" placeholder="Example: 230120107001" required minlength="3">
+
+                <label>Department</label>
+                <input id="department" type="text" placeholder="Example: CSE" required>
+
+                <label>Phone Number</label>
+                <input id="phone" type="tel" placeholder="10 digit mobile number" required minlength="10">
+
+                <label>Request Type</label>
+                <select id="request_type" required>
+                    <option value="ID Card Problem">ID Card Problem</option>
+                    <option value="Certificate Request">Certificate Request</option>
+                    <option value="Fee Query">Fee Query</option>
+                    <option value="Website Issue">Website Issue</option>
+                    <option value="Library Issue">Library Issue</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label>Message</label>
+                <textarea id="message" placeholder="Explain your problem" required minlength="5"></textarea>
+
+                <button type="submit">Submit Request</button>
+                <div id="submitResult" class="result-box"></div>
+            </form>
+        </section>
+
+        <section id="track" class="card">
+            <p class="section-label">Student Tracking</p>
+            <h2>Track Your Request</h2>
+            <div class="inline-form">
+                <input id="trackId" type="text" placeholder="Enter Request ID, example: HLP-ABC12345">
+                <button id="trackBtn">Track Status</button>
+            </div>
+            <div id="trackResult" class="result-box"></div>
+        </section>
+
+        <section id="admin" class="card">
+            <p class="section-label">Protected Admin Area</p>
+            <h2>Admin Dashboard</h2>
+            <p class="muted">Default demo admin key: <b>campus-admin-123</b>. Change it before final submission or production use.</p>
+
+            <div class="inline-form">
+                <input id="adminKey" type="password" placeholder="Enter admin key">
+                <button id="loadAdminBtn">Load Dashboard</button>
+            </div>
+
+            <div class="stats" id="stats"></div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student</th>
+                            <th>Department</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Smart Campus Help Desk Portal | Internship Project</p>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
