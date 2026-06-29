@@ -13,15 +13,14 @@
             <div class="nav-links">
                 <a href="#submit">Submit</a>
                 <a href="#track">Track</a>
-                <a href="#admin">Admin</a>
+                <a href="admin.html">Admin</a>
             </div>
         </nav>
 
         <div class="hero-content">
-            <p class="badge">FastAPI + Frontend + Secure Admin Panel</p>
             <h1>Student Help Desk Request Portal</h1>
             <p class="subtitle">
-                Submit campus issues, track request status, and manage requests through a protected admin dashboard.
+                Submit campus issues, track request status, and get support from the college help desk team.
             </p>
         </div>
     </header>
@@ -31,7 +30,7 @@
             <div>
                 <p class="section-label">Student Area</p>
                 <h2>Submit a Request</h2>
-                <p class="muted">Fill the form and the backend will store your request in JSON storage with a unique request ID.</p>
+                <p class="muted">Fill the form and save your Request ID to track your request status later.</p>
             </div>
 
             <form id="requestForm" class="form">
@@ -73,34 +72,6 @@
                 <button id="trackBtn">Track Status</button>
             </div>
             <div id="trackResult" class="result-box"></div>
-        </section>
-
-        <section id="admin" class="card">
-            <p class="section-label">Protected Admin Area</p>
-            <h2>Admin Dashboard</h2>
-            <p class="muted">Default demo admin key: <b>campus-admin-123</b>. Change it before final submission or production use.</p>
-
-            <div class="inline-form">
-                <input id="adminKey" type="password" placeholder="Enter admin key">
-                <button id="loadAdminBtn">Load Dashboard</button>
-            </div>
-
-            <div class="stats" id="stats"></div>
-            <div class="table-wrap">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Student Details</th>
-                            <th>Request Details</th>
-                            <th>Problem Message</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="requestTable"></tbody>
-                </table>
-            </div>
         </section>
     </main>
 

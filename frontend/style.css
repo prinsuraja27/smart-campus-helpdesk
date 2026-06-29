@@ -278,3 +278,91 @@ footer {
     color: #172033;
     white-space: normal;
 }
+
+
+.detail-panel {
+    margin: 22px 0;
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.detail-panel.hidden {
+    display: none;
+}
+
+.detail-panel h3 {
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 14px;
+}
+
+.detail-grid div,
+.message-box {
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.detail-grid b,
+.message-box b {
+    display: block;
+    color: #93c5fd;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.detail-grid span,
+.message-box p {
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.message-box {
+    margin-top: 14px;
+}
+
+.small-btn.view {
+    background: #2563eb;
+}
+
+/* Separate Admin Page Update */
+.admin-hero {
+    min-height: 300px;
+}
+
+.admin-container {
+    margin-top: -55px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.admin-container table {
+    min-width: 1180px;
+}
+
+.admin-container th,
+.admin-container td {
+    vertical-align: top;
+}
+
+.admin-container .problem-message {
+    min-width: 290px;
+    max-width: 420px;
+    white-space: normal;
+}
+
+.admin-container .action-row {
+    flex-wrap: wrap;
+    min-width: 170px;
+}

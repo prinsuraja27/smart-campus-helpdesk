@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Smart Campus Help Desk</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="hero admin-hero">
+        <nav class="navbar">
+            <div class="brand">Smart Campus Help Desk</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#submit">Submit</a>
+                <a href="index.html#track">Track</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Admin Dashboard</h1>
+            <p class="subtitle">
+                Login with admin key to view student details, problem messages, request status, and actions.
+            </p>
+        </div>
+    </header>
+
+    <main class="container admin-container">
+        <section class="card">
+            <p class="section-label">Protected Admin Login</p>
+            <h2>Admin Access</h2>
+            <p class="muted">Enter admin key to load all student request details.</p>
+
+            <div class="inline-form">
+                <input id="adminKey" type="password" placeholder="Enter admin key">
+                <button id="loadAdminBtn">Login & Load Details</button>
+            </div>
+
+            <div id="adminResult" class="result-box"></div>
+        </section>
+
+        <section id="adminDashboard" class="card hidden">
+            <p class="section-label">Admin Panel</p>
+            <h2>Student Request Details</h2>
+            <p class="muted">Admin can see student name, enrollment, department, phone number, request type, problem message, and status.</p>
+
+            <div class="stats" id="stats"></div>
+
+            <div id="detailPanel" class="detail-panel hidden">
+                <h3>Selected Student Full Details</h3>
+                <div id="detailContent"></div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Enrollment</th>
+                            <th>Department</th>
+                            <th>Phone</th>
+                            <th>Request Type</th>
+                            <th>Problem Message</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Smart Campus Help Desk Portal | Admin Area</p>
+    </footer>
+
+    <script src="assets/js/admin.js"></script>
+</body>
+</html>
