@@ -1,4 +1,4 @@
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://smart-campus-helpdesk.onrender.com";
 
 const requestForm = document.getElementById("requestForm");
 const submitResult = document.getElementById("submitResult");
